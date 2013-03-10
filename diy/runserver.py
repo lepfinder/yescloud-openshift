@@ -16,4 +16,6 @@ execfile(virtualenv, dict(__file__=virtualenv))
 from yescloud import app
 
 if __name__ == "__main__":
-	app.run(port=8080)
+	port = os.environ['OPENSHIFT_INTERNAL_PORT']
+	address = os.environ['OPENSHIFT_INTERNAL_IP']    
+	app.run(host=address,port=port)
