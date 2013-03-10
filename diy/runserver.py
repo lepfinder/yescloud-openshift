@@ -1,11 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: runserver.py
 # Author: xiyang
 # mail: sdlgxxy@gmail.com
 # Created Time: Thu 07 Mar 2013 09:15:47 PM CST
 ########################################################################
-# -*- coding: UTF-8 -*-
-#!/usr/bin/env python
 import os
 here = os.path.dirname(os.path.abspath(__file__))
 os.environ['PYTHON_EGG_CACHE'] = os.path.join(here, '..', 'misc/virtenv/lib/python2.7/site-packages')
