@@ -18,4 +18,4 @@ from yescloud import app
 if __name__ == "__main__":
 	port = os.environ['OPENSHIFT_INTERNAL_PORT']
 	address = os.environ['OPENSHIFT_INTERNAL_IP']    
-	app.run(host=address,port=port)
+	app.run(host=address,port=int(port))
