@@ -5,5 +5,5 @@
 python -V
 export PATH=${OPENSHIFT_DATA_DIR}/bin:$PATH
 python -V
-chmod a+x ${OPENSHIFT_REPO_DIR}/diy/manage.py
-nohup ${OPENSHIFT_REPO_DIR}/diy/manage.py runserver > ${OPENSHIFT_DIY_LOG_DIR}/app.log 2>&1 &
+chmod a+x ${OPENSHIFT_REPO_DIR}/diy/runserver.py
+nohup ${OPENSHIFT_REPO_DIR}/diy/runserver.py> ${OPENSHIFT_DIY_LOG_DIR}/app.log 2>&1 &
