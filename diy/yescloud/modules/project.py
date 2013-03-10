@@ -1,11 +1,12 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: project.py
 # Author: xiyang
 # mail: sdlgxxy@gmail.com
 # Created Time: Sun 10 Mar 2013 01:26:54 PM CST
 ########################################################################
-# -*- coding: UTF-8 -*-
-#!/usr/bin/env python
+
 import datetime
 from mongokit import *
 from flask.ext.wtf import Form, TextField, TextAreaField, ValidationError, Required

@@ -1,11 +1,12 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: msg_push.py
 # Author: xiyang
 # mail: sdlgxxy@gmail.com
 # Created Time: Sat 09 Mar 2013 11:29:47 AM CST
 ########################################################################
-# -*- coding: UTF-8 -*-
-#!/usr/bin/env python
+
 from flask import request,render_template,redirect,url_for,flash
 from flask.ext.login import LoginManager,current_user,login_required
 from yescloud import app,connection

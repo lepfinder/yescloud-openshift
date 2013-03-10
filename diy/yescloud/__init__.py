@@ -1,11 +1,11 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: __init__.py
 # Author: xiyang
 # mail: sdlgxxy@gmail.com
 # Created Time: Sat 09 Mar 2013 11:12:47 AM CST
 ########################################################################
-# -*- coding: UTF-8 -*-
-#!/usr/bin/env python
 from flask import Flask
 from flask.ext.bootstrap import Bootstrap
 from flask.ext.login import (LoginManager,current_user,login_required,

@@ -1,11 +1,11 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: blog.py
 # Author: xiyang
 # mail: sdlgxxy@gmail.com
 # Created Time: Thu 07 Mar 2013 09:15:47 PM CST
 ########################################################################
-# -*- coding: UTF-8 -*-
-#!/usr/bin/env python
 from flask import render_template,request,redirect,url_for,flash
 from flask.ext.login import LoginManager,current_user,login_required,login_user,logout_user
 from yescloud.modules import Project

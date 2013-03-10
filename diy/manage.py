@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#! /usr/bin/env python
 # -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: manage.py
@@ -14,4 +14,3 @@ manager = Manager(app)
 
 if __name__ == "__main__":
 	manager.run()
-

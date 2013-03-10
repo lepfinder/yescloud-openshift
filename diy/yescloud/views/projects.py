@@ -1,11 +1,12 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: projects.py
 # Author: xiyang
 # mail: sdlgxxy@gmail.com
 # Created Time: Sun 10 Mar 2013 11:24:12 AM CST
 ########################################################################
-# -*- coding: UTF-8 -*-
-#!/usr/bin/env python
+
 import uuid
 from flask import request,render_template,redirect,url_for,flash
 from flask.ext.login import login_required,current_user

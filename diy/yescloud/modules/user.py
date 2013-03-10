@@ -1,11 +1,12 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
 #########################################################################
 # File Name: user.py
 # Author: xiyang
 # mail: sdlgxxy@gmail.com
 # Created Time: Sun 10 Mar 2013 11:43:54 AM CST
 ########################################################################
-# -*- coding: UTF-8 -*-
-#!/usr/bin/env python
+
 from flask.ext.login import UserMixin
 
 class User(UserMixin):
