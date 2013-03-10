@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block wrapper_content %}
+<h1>Login<h1><hr/>
+<form class="form-horizontal" action="/login/" method="post">
+  <div class="control-group">
+    <label class="control-label" for="username">username:</label>
+    <div class="controls">
+      <input type="text" id="username" name="username" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="password">password:</label>
+    <div class="controls">
+      <input type="password" id="password" name="password" placeholder="password">
+    </div>
+  </div>
+  <input type="hidden" name="next" value="${next }">
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> remberme
+      </label>
+      <button type="submit" class="btn">Login</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends "base.html"%}
+{% import "bootstrap_wtf.html" as wtf %}
+{% block wrapper_content %}
+<h1>Create Project</h1><hr/>
+{{ wtf.quick_form(form) }}
+{% endblock %}

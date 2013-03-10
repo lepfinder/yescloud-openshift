@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block wrapper_content%}
+<div class="row">
+	<div class="span8">
+	<h1>Project List</h1><hr/>
+		<table class="table table-bordered table-striped">
+			<tr><td>Name</td><td></td></tr>
+			{% for p in projects %}
+			<tr>
+				<td>{{ p.name }}</td>
+				<td><a class="btn btn-info" href="/project/{{ p.appkey }}"><i class="icon-info-sign icon-white"></i> Watch</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<div class="span4">
+		<h2>Recent Message</h2>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "bootstrap_responsive.html" %}
+
+{% block body_content %}
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">App Monitor</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/About/">About</a></li>
+            </ul>
+			<ul class="nav pull-right">
+				{% if not current_user.is_anonymous()  %}
+					<li><a href="/project/create/">Create Project</a></li>
+					<li><a href="/logout/">Logout</a></li>
+				{% endif %}
+			</ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+		{% for category,message in get_flashed_messages(True) %}
+		<div class="alert alert-{{category }}">
+				{{ message }}
+		</div>
+		{% endfor %}
+		{% block wrapper_content%}
+		{% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block wrapper_content %}
+<h1>请登录先：<h1><hr/>
+<form class="form-horizontal" action="/login/" method="post">
+  <div class="control-group">
+    <label class="control-label" for="email">帐号</label>
+    <div class="controls">
+      <input type="text" id="username" name="email" value="${email}" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="password">密码</label>
+    <div class="controls">
+      <input type="password" id="password" name="password" placeholder="密码">
+    </div>
+  </div>
+  <input type="hidden" name="next" value="${next }">
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> 记住帐号
+      </label>
+      <button type="submit" class="btn">登录</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}
