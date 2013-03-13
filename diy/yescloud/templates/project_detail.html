@@ -6,13 +6,13 @@
 </div>
 <div style="clear:both"></div>
 <div class="row">
-	<table class="table">
-		<tr><td colspan="3" style="font-weight:bold;font-size:1.3em;">Log Message List:</td></tr>
+	<table class="table" style="width:90%;">
+		<tr><td colspan="3" style="font-weight:bold;font-size:1.3em;padding-left:20px;">Log Message List:</td></tr>
 		{% for msg in messages %}
 		<tr>
-			<td width="20">{{ loop.index }}</td>
+			<td width="20" style="padding-left:20px;">{{ loop.index }}</td>
 			<td width="140">{{ msg.date_creation.strftime("%Y-%m-%d %H:%M:%S") }}</td>
-			<td>{{ msg.message }}</td>
+			<td>{{ msg.msg_content }}</td>
 		</tr>
 		{% endfor %}
 	</table>

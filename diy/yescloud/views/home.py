@@ -15,7 +15,10 @@ from yescloud import app,connection
 @login_required
 def index():
 	projects = connection.Project.find()
-	return render_template("index.html",projects = projects)
+	
+	messages = connection.LogMessage.find().sort([("_id",-1)]).limit(10)
+	
+	return render_template("index.html",projects = projects,messages=messages)
 
 @app.route("/login/",methods=["GET","POST"])
 def login():

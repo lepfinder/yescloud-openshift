@@ -25,7 +25,7 @@ class LogSender(object):
 				'receiver_type':self.receiver_type,
 				'verification_code':self.verification_code,
 				'msg_type':self.msg_type,
-				'msg_content':'{"n_content":"%s"}' % self.msg_content.strip(),
+				'msg_content':self.msg_content,
 				'platform':self.platform,
 		}
 		return params
@@ -39,10 +39,11 @@ class LogSender(object):
 		return f.read()
 
 if __name__ == "__main__":
-	sendno = 2
-	appkey = '0a6c14b65be8bbb486a5c60f'
+	
+	sendno = 3
+	appkey = '5f7bceda07dab8d14ddf7a91'
 	receiver_type = 4
-	master_secret = '5e2d97047d3e6a93db252a1f'
+	master_secret = '323ef4d65ec3eca4ed5ecbb2'
 	msg_type = 1
 	msg_content = '{"n_content":"tomcat 挂了"}'
 	platform = 'android'

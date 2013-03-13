@@ -11,6 +11,8 @@ import datetime
 from mongokit import *
 from flask.ext.wtf import Form, TextField, TextAreaField, ValidationError, Required
 
+
+
 class Project(Document):
 	__collection__ = 'project'
 	__database__ = 'yescloud'
@@ -23,6 +25,7 @@ class Project(Document):
 	}
 	
 	default_values = {'date_creation':datetime.datetime.utcnow}
+
 
 class ProjectForm(Form):
 	name = TextField('name',description="the project's name",validators=[Required()])

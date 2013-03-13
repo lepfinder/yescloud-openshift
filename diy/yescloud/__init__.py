@@ -11,24 +11,23 @@ from flask.ext.bootstrap import Bootstrap
 from flask.ext.login import (LoginManager,current_user,login_required,
 		login_user,logout_user,UserMixin,AnonymousUser,confirm_login)
 from mongokit import Connection
-
 from setting import *
 
-
 app = Flask(__name__)
+app.debug = True
 
 SECRET_KEY = 'nishigedachunlv'
-app.debug = True
 Bootstrap(app)
 
 app.config.from_object(__name__)
 app.config['BOOTSTRAP_USE_CDN'] = False
 
+
 connection = Connection(app.config['MONGO_URL'])
-connection.register([modules.Project,modules.LogMessage])
+connection.register([modules.Project,modules.LogMessage,modules.SendNo])
+
 
 login_manager = LoginManager()
-
 login_manager.login_view = "login"
 login_manager.login_message = u"Please Login First!"
 

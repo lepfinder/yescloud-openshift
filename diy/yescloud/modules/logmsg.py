@@ -10,17 +10,29 @@
 import datetime
 from mongokit import *
 
+
 class LogMessage(Document):
 	__collection__ = 'log_message'
 	__database__ = 'yescloud'
 	structure = {
 			'appkey':str,
-			'message':str,
+	        'project_name':str,
+	        'msg_title' :str,
+			'msg_content':str,
 			'appkey':str,
-			'date_creation':datetime.datetime
+			'date_creation':datetime.datetime,
+	        'send_status':str,
 	}
 	
 	default_values = {'date_creation':datetime.datetime.utcnow}
 
+
+class SendNo(Document):
+	__collection__ = 'send_no'
+	__database__ = 'yescloud'
+	structure = {
+	    'name':str,
+	    'val':int
+	}
 
 
