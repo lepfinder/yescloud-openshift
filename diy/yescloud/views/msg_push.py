@@ -44,7 +44,7 @@ def send_msg():
 	master_secret = app.config['JPUSH_CLIENT_MASTER_SECRET']
 	msg_type = app.config['JPUSH_CLIENT_MSG_TYPE']
 	
-	msg_content = u'{"n_content":"%s","n_extras":{"msg_id":"%s"}}' % ("".join(['[',project['name'],']',msg['msg_title'].strip()]),msg['_id'])
+	msg_content = u'{"n_content":"%s","n_extras":{"msg_id":"%s"}}' % (unicode("".join(['[',project['name'],']',msg['msg_title'].strip()])),msg['_id'])
 	platform = app.config['JPUSH_CLIENT_PLATFORM']
 
 	sender = LogSender(sendno,appkey,receiver_type,master_secret,msg_type,msg_content,platform)
