@@ -1,5 +1,7 @@
 {% extends "bootstrap_responsive.html" %}
-
+{% block title %}
+  Server Monitor
+{% endblock%}
 {% block body_content %}
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
 
@@ -11,7 +13,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">App Monitor</a>
+          <a class="brand" href="/">Server Monitor</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="/">Home</a></li>

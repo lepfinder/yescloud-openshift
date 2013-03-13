@@ -15,13 +15,12 @@ class LogMessage(Document):
 	__collection__ = 'log_message'
 	__database__ = 'yescloud'
 	structure = {
-			'appkey':str,
-	        'project_name':str,
-	        'msg_title' :str,
-			'msg_content':str,
-			'appkey':str,
+			'appkey':unicode,
+	        'project_name':unicode,
+	        'msg_title' :unicode,
+			'msg_content':unicode,
 			'date_creation':datetime.datetime,
-	        'send_status':str,
+	        'send_status':unicode,
 	}
 	
 	default_values = {'date_creation':datetime.datetime.utcnow}

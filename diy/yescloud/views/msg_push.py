@@ -18,13 +18,13 @@ from mongokit import ObjectId
 @app.route("/sendmsg/",methods=["POST"])
 def send_msg():
 	msg = connection.LogMessage()
-	msg['appkey'] = str(request.form['appkey'])
-	msg['msg_title'] = str(request.form['msg_title'])
-	msg['msg_content'] = str(request.form['msg_content'])
+	msg['appkey'] = request.form['appkey']
+	msg['msg_title'] = request.form['msg_title']
+	msg['msg_content'] = request.form['msg_content']
 	
 	project = connection.Project.find_one({"appkey":msg['appkey']})
-	msg['project_name'] = str(project['name'])
-
+	msg['project_name'] = project['name']
+	
 	msg.save()
 	
 	

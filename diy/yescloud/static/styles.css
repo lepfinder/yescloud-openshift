@@ -1,9 +1,20 @@
 h1{font-size:24px;}
 .side_block{
-    border:solid 1px #aaa;
-   
+   border:solid 1px #aaa;
+   border-radius: 5px;
+   background:#eee;
 }
 .side_block h2{
-    padding:5px 10px 10px 10px;
-    background:#aaa;
+   margin-top:0px;
+   font-size:20px;
+   padding:8px;
+   background:#4F9D9D;
+}
+
+.side_block li{
+   font-size:12px;
+   list-style:none;
+   padding-top:4px;
+   padding-bottom:4px;
+   line-height:20px;
 }

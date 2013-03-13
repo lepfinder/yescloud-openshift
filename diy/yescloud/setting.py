@@ -33,6 +33,6 @@ if env.has_key('OPENSHIFT_APP_NAME'):
 	MONGO_URL = env["OPENSHIFT_MONGODB_DB_URL"]
 else:
 	print "local envirment"
-	os.environ['OPENSHIFT_INTERNAL_IP'] = "172.19.41.72"
+	os.environ['OPENSHIFT_INTERNAL_IP'] = "127.0.0.1"
 	os.environ['OPENSHIFT_INTERNAL_PORT'] = "8888"	
 	MONGO_URL = 'mongodb://admin:g7iEU2KxPaR9@127.0.0.1:27017/'

@@ -19,9 +19,10 @@
 			<ul>
 				{% for msg in messages %}
 					<li>
-					[{{ msg.project_name }}]{{ msg.date_creation.strftime("%Y-%m-%d %H:%M:%S") }}
+					<span>[{{ msg.project_name }}] </span>
+					<span style="color:#666;">({{ msg.date_creation.strftime("%Y-%m-%d %H:%M:%S") }})</span>
 					<br/>
-					{{ msg.msg_title }}				
+					消息：{{ msg.msg_title }}				
 					</li>
 				{% endfor %}
 			</ul>
