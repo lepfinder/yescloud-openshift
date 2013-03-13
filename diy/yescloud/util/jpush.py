@@ -32,7 +32,6 @@ class LogSender(object):
 
 	def sendto(self):
 		#print self.formatParams()['msg_content']
-		print unicode(self.msg_content)
 		print self.msg_content.decode("utf-8")
 		print self.msg_content
 		f = urllib2.urlopen(
