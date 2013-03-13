@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-#coding=utf-8
+# -*- coding: UTF-8 -*-
 #*******************************************
 # http://docs.jpush.cn/pages/viewpage.action?pageId=2621796
 # 极光推送 服务器端api
