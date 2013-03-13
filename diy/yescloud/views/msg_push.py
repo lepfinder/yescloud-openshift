@@ -47,9 +47,7 @@ def send_msg():
 	msg_content = '{"n_content":"%s","n_extras":{"msg_id":"%s"}}' % ("".join(['[',project['name'],']',msg['msg_title'].strip()]),msg['_id'])
 	platform = app.config['JPUSH_CLIENT_PLATFORM']
 
-	
-	msg_content = msg_content.encode("utf-8")
-	sender = LogSender(sendno,appkey,receiver_type,master_secret,msg_type,msg_content,platform)
+	sender = LogSender(sendno,appkey,receiver_type,master_secret,msg_type,msg_content.encode("utf-8"),platform)
 	
 	msg['send_status'] = sender.sendto()
 	print msg['send_status']
