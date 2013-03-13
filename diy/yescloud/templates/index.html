@@ -19,7 +19,8 @@
 			<ul>
 				{% for msg in messages %}
 					<li>
-					<span>[{{ msg.project_name }}] </span>
+					<i class="icon-hand-right"></i>
+					<span>&nbsp;&nbsp;[{{ msg.project_name }}] </span>
 					<span style="color:#666;">({{ msg.date_creation.strftime("%Y-%m-%d %H:%M:%S") }})</span>
 					<br/>
 					消息：{{ msg.msg_title }}				
