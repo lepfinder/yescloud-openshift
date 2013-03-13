@@ -48,7 +48,7 @@ def send_msg():
 	platform = app.config['JPUSH_CLIENT_PLATFORM']
 
 	
-	msg_content = unicode(msg_content)
+	msg_content = msg_content.encode("utf-8")
 	sender = LogSender(sendno,appkey,receiver_type,master_secret,msg_type,msg_content,platform)
 	
 	msg['send_status'] = sender.sendto()
