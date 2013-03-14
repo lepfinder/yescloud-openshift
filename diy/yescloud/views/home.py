@@ -20,6 +20,11 @@ def index():
 	
 	return render_template("index.html",projects = projects,messages=messages)
 
+@app.route("/about/")
+@login_required
+def about():
+	return render_template("about.html")
+
 @app.route("/login/",methods=["GET","POST"])
 def login():
 	if request.method == "POST" and "username" in request.form:
@@ -31,7 +36,7 @@ def login():
 		if username == app.config['ADMIN_USERNAME']:
 			if password == app.config['ADMIN_PASSWORD']:
 				if login_user(app.config['USERS'].get(app.config['ADMIN_USERID'])):
-					flash("Logged in!")
+					flash("You are logged in successful!","success")
 					return redirect(request.args.get("next") or url_for("index"))
 			else:
 				flash ("Sorry, please check your password!","error")

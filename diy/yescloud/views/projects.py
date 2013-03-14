@@ -31,6 +31,14 @@ def project_create():
 		return redirect(url_for("index"))
 	return render_template("project_create.html",form=form)
 
+
+@app.route("/project/<appkey>/setting")
+@login_required
+def project_setting(appkey):
+	project = connection.Project.find_one({"appkey":appkey})
+	return render_template("project_setting.html",p = project)
+
+
 @app.route("/project/<appkey>")
 @login_required
 def project_detail(appkey):

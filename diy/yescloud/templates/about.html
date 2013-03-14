@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block wrapper_content%}
+<div class="page-header">
+	<h1>About</h1>
+</div>
+<p>This is About page</p>
+{% endblock %}
+
+{% block bootstrap_js_bottom %}
+{{super()}}
+<script type="text/javascript">
+	$("#nav_about").addClass("active")
+	$("#nav_home").removeClass("active")
+</script>
+{% endblock %}
