@@ -46,4 +46,6 @@
 		<br/><br/>
     </div>
 {% endblock %}
-
+{% block bootstrap_js_bottom %}
+<script type="text/javascript" src={{ url_for('static',filename='jquery-1.9.1.min.js') }}></script>
+{% endblock %}
