@@ -8,8 +8,10 @@
 ########################################################################
 from flask import render_template,request,redirect,url_for,flash
 from flask.ext.login import LoginManager,current_user,login_required,login_user,logout_user
-from yescloud.modules import Project
-from yescloud import app,connection
+from yescloud.models import Project,User
+from yescloud import app
+from yescloud.store import connection
+from mongokit import ObjectId
 
 @app.route("/")
 @login_required
@@ -30,18 +32,14 @@ def login():
 	if request.method == "POST" and "username" in request.form:
 		username = request.form['username']
 		password = request.form['password']
+		user = connection.yescloud.user.one({'name':username,'password':password})
 
-		print username,password
-		print app.config['ADMIN_USERNAME'],app.config['ADMIN_PASSWORD']
-		if username == app.config['ADMIN_USERNAME']:
-			if password == app.config['ADMIN_PASSWORD']:
-				if login_user(app.config['USERS'].get(app.config['ADMIN_USERID'])):
-					flash("You are logged in successful!","success")
-					return redirect(request.args.get("next") or url_for("index"))
-			else:
-				flash ("Sorry, please check your password!","error")
+		if user:
+			if login_user(User(user['_id'],user['name'],user['password'])):		
+				flash("You are logged in successful!","success")
+				return redirect(request.args.get("next") or url_for("index"))
 		else:
-			flash("Invalid username!","error")
+			flash ("Sorry, please check your username or password!","error")
 	return render_template("login.html")
 
 @app.route("/logout/")

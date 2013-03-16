@@ -10,7 +10,7 @@
 import uuid
 from flask import request,render_template,redirect,url_for,flash
 from flask.ext.login import login_required,current_user
-from yescloud.modules import Project,ProjectForm,LogMessage
+from yescloud.models import Project,ProjectForm,LogMessage
 
 from yescloud import app,connection
 

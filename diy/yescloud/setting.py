@@ -7,25 +7,14 @@
 # Created Time: Sun 10 Mar 2013 11:32:04 AM CST
 ########################################################################
 import os
-from modules import User,SendNo
 
-SITE_TITLE = "APP MONITOR"
-
-USERS = {
-	1:User(u"admin",1,u"admin")
-}
-
-ADMIN_USERID = 1
-ADMIN_USERNAME = u'admin'
-ADMIN_PASSWORD = u'admin'
+SITE_TITLE = "SERVER MONITOR"
 
 JPUSH_CLIENT_APPKEY = '5f7bceda07dab8d14ddf7a91'
 JPUSH_CLIENT_MASTER_SECRET = '323ef4d65ec3eca4ed5ecbb2'
 JPUSH_CLIENT_RECEIVER_TYPE = 4 #
 JPUSH_CLIENT_MSG_TYPE = 1
 JPUSH_CLIENT_PLATFORM = 'android'
-
-
 
 env = os.environ
 if env.has_key('OPENSHIFT_APP_NAME'):

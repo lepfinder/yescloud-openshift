@@ -11,7 +11,7 @@ import json
 from flask import request,render_template,redirect,url_for,flash
 from flask.ext.login import LoginManager,current_user,login_required
 from yescloud import app,connection
-from yescloud.modules import LogMessage,SendNo
+from yescloud.models import LogMessage,SendNo
 from yescloud.util import LogSender
 from mongokit import ObjectId
 

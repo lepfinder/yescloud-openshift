@@ -10,9 +10,9 @@
 import datetime
 from mongokit import *
 from flask.ext.wtf import Form, TextField, TextAreaField, ValidationError, Required
+from yescloud.store import connection
 
-
-
+@connection.register
 class Project(Document):
 	__collection__ = 'project'
 	__database__ = 'yescloud'

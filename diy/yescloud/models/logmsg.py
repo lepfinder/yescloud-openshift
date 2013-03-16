@@ -9,8 +9,9 @@
 
 import datetime
 from mongokit import *
+from yescloud.store import connection
 
-
+@connection.register
 class LogMessage(Document):
 	__collection__ = 'log_message'
 	__database__ = 'yescloud'
@@ -25,7 +26,7 @@ class LogMessage(Document):
 	
 	default_values = {'date_creation':datetime.datetime.utcnow}
 
-
+@connection.register
 class SendNo(Document):
 	__collection__ = 'send_no'
 	__database__ = 'yescloud'
