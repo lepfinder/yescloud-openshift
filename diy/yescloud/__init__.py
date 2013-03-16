@@ -35,11 +35,13 @@ import views,models,util
 
 @login_manager.user_loader
 def load_user(id):
-	user = connection.yescloud.user.one({"_id":ObjectId(id)})
-	if user:
-		return models.User(user['_id'],user['name'],user['password'])
-	else:
-		return None
+	try:
+		user = connection.yescloud.user.one({"_id":ObjectId(id)})
+		if user:
+			return models.User(user['_id'],user['name'],user['password'])		
+	except:
+		pass
+	return None
 
 login_manager.setup_app(app)
 
